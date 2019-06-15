@@ -1,0 +1,7 @@
+Credits:
+Jquery
+Bootstrap
+Font-awesome
+jquery-stellar
+Images : Unsplash
+Goolgle fonts : Montserrat & Muli
