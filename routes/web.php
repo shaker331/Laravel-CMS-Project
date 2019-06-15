@@ -14,39 +14,10 @@
 //Auth::routes(['verify' => true]);
 
 
-Auth::routes();//Profile
+Auth::routes();
+//Profile
 Route::get('/profile', 'ProfileController@index')->name('profile');
-
-//Route::get('/profile/create', 'ProfileController@create')->name('profile.create');
-//Route::post('/profile/store', 'ProfileController@store')->name('profile.store');
-//Route::get('/profile/edit/{id}', 'ProfileController@edit')->name('profile.edit');
 Route::post('/profile/update/{id}', 'ProfileController@update')->name('profile.update');
-
-//sendmail
-
-
-//Route::get('sendemail', function () {
-
-  //  $data = array(
-   //     'name' => "Learning Laravel",
-  //  );
-
-  //  Mail::send('emails.test', $data, function ($message) {
-
-     //   $message->from('shaker3318674@gmail.com', 'Learning Laravel');
-
-     //   $message->to('shaker3318675@gmail.com')->subject('Learning Laravel test email');
-
-  //  });
-
-   // return "Your email has been sent successfully";
-
-//});
-
-
-//testemail
-//Route::get('/testemail', 'testEmailController@testEmail')->name('testEmail');
-
 Route::get('/about','webController@about')->name('about');
 Route::get('/contact','webController@contact')->name('contact');
 Route::get('/privacy','webController@privacy')->name('privacy');
