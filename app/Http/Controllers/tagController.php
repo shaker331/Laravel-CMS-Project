@@ -17,6 +17,15 @@ class tagController extends Controller
     {
         $this->middleware("auth");
     }
+
+
+    
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255','unique']
+        ]);
+    }
     public function index()
     {
         $tags= Tag::all();
@@ -42,8 +51,9 @@ return view('tags.index',compact('tags'));
      */
     public function store(Request $request)
     {
+       
         $this->validate($request,[
-            "name" => "required",
+           'name' =>  ['required', 'string', 'max:255', 'unique:tags']
             ]);
             Tag::create([
             'name'=>$request->name

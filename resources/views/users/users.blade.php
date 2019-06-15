@@ -107,7 +107,6 @@
 								</ul>
 							</div>
 						</div>
-						<!-- /category widget -->
 				</div>
 			</div>
 			<!-- /row -->
